@@ -11,12 +11,12 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: '*',
+        origin: "*", 
         methods: 'GET,POST,PUT,DELETE',
-        credentials: true,
+        credentials: true,  
+        allowedHeaders: ['Content-Type', 'Authorization']
     })
 );
-
 
 app.use('/api', router);    
 
