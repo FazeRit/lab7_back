@@ -1,5 +1,5 @@
-import prisma from 'src/db/db.js';   
-import { ApiError } from 'src/errors/apiError.js';
+import prisma from '../db/db.js';   
+import { ApiError } from '../errors/apiError.js';
 
 export default class TextService {
     static async getData() {
