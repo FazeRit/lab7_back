@@ -13,6 +13,7 @@ app.use(
     cors({
         origin: ['https://fazerit.github.io', 'http://localhost:3000'],
         methods: 'GET,POST,PUT,DELETE',
+        credentials: true,
     })
 );
 
