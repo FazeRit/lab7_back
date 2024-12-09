@@ -9,9 +9,11 @@
     "prisma": "^6.0.1"
   },
   "type": "module",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
+    "scripts": {
+      "dev": "nodemon api/index.js",
+      "build": "npx prisma generate --schema=api/db/prisma/schema.prisma",
+      "start": "node api/index.js"
+    },
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
