@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "./generated/client"
 }
 
 datasource db {
@@ -7,12 +8,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Text {
-  id               Int      @id @default(autoincrement())
-  text             String
-  padding          Int
-  animationDuration Float
-  mainColor        String
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+model Event {
+  id          Int      @id @default(autoincrement()) 
+  eventTime   DateTime @default(now())             
+  eventType   String  
+  message     String   
+
+  @@index([eventTime]) 
+  @@index([eventType])
 }
+

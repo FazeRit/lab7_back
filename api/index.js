@@ -11,12 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-        origin: "*", 
+        origin: 'https://fazerit.github.io',
         methods: 'GET,POST,PUT,DELETE',
-        credentials: true,  
-        allowedHeaders: ['Content-Type', 'Authorization']
+        credentials: true,
+        allowedHeaders: ['Content-Type', 'Authorization'],  
     })
 );
+
 
 app.use('/api', router);    
 

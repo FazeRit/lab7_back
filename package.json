@@ -11,7 +11,7 @@
   "type": "module",
 
     "scripts": {
-      "build": "npx prisma generate --schema=api/db/prisma/schema.prisma",
+      "postinstall": "cd ./api/db/prisma && prisma generate",
       "start": "node api/index.js",
       "dev": "nodemon api/index.js"
     }
